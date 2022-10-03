@@ -1,0 +1,8 @@
+$fa-font-path: "~font-awesome/fonts";
+/*override variables*/
+$primary:#fff;
+$secondary: #5cb874;
+
+.ratio-4x10 {
+  --bs-aspect-ratio: calc(4 / 10 * 100%);
+}
