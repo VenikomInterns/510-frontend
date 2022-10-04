@@ -55,7 +55,7 @@ export default {
         }else{
           this.inserted=false
         }
-      }
+      } // repeating code 
       if(this.inserted===false){
         this.cart.push({
           id:this.product.id,
@@ -63,7 +63,7 @@ export default {
           description:this.product.description,
           price:this.product.price,
           image:this.product.image
-        })
+        }) 
         this.message="Added to your cart"
       }else{
         this.message="You have already added"

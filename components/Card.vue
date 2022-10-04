@@ -2,11 +2,14 @@
   <div>
     <div class="card shadow p-2 mb-3 bg-body rounded position-relative container" style="width: 18rem;">
         <div class="imgDiv">
+          <!--Why not using nuxt links-->
           <a :href="'Product?id='+String(product.id)">
+            <!--hard coding url locations-->
             <img :src="'http://localhost:8000/storage'+product.image.substring(6)" class="card-img-top" height="270"
                  :alt="product.name">
           </a>
         </div>
+        <!---a tag without href="" is not a tag-->
       <a v-on:click="addToCart" class="position-absolute end-0 margin-285"><i class="fa fa-heart fa-3x text-danger"></i></a>
 
       <div class="card-body">
@@ -56,15 +59,15 @@ export default {
         } else {
           this.inserted = false
         }
-      }
-      if (this.inserted === false) {
+      } //can be simplified
+      if (this.inserted === false) { //can mi simplified 
         this.cart.push({
           id: this.product.id,
           name: this.product.name,
           description: this.product.description,
           price: this.product.price,
           image: this.product.image
-        })
+        }) //why not this.cart.push(this.product)
         this.message = "Added to your cart"
       } else {
         this.message = "You have already added"

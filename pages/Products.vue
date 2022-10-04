@@ -42,7 +42,7 @@ export default {
     const response1 = await fetch(
       'http://127.0.0.1:8000/api/category/'+category_id
     ).then(res => res.json());
-    this.products=response1.data
+    this.products=response1.data 
 
   },
   mounted() {
